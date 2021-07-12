@@ -1,0 +1,68 @@
+@media screen and (max-width: 1000px) {
+  #hero {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 50%;
+  }
+
+  .hero-info {
+    text-align: center;
+  }
+
+  .hero-info h1 {
+    margin-bottom: 0;
+  }
+
+  .hero-info-btn {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-info {
+    padding: 0;
+  }
+
+  .portfolio-wrapper,
+  .about-wrapper,
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    min-height: 500px;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .project-thumbnail {
+    height: 250px;
+  }
+
+  .project-desc {
+    height: 40%;
+    position: relative;
+    opacity: 1;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media {
+    margin: 0 auto 0.8rem;
+  }
+}
