@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squash Codes - Tutoriais</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Font awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* fundo do pop-up (background) */
+      .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2; /* Define que o pop-up deverá ficar sobre outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; /* Habilita o scroll */            
+            background-color: rgb(0,0,0); 
+      }
+
+      /* Modal Content */
+      .modal-content {
+            position: relative;
+            /*background-color: #fefefe;*/
+            margin: auto;
+            padding: 0;
+            width: 75%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.6s
+      }
+
+      /* Animações */
+      @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+      }
+
+      @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+      }
+
+      /* Botão Fechar */
+      .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      }
+      .modal-body {padding: 2px 16px;}
+      </style>
+
+  </head>
+  <body>
+
+      
+
+    <div id="myModal" class="modal">      
+      <!-- Conteúdo do Pop-up -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <video id="myVideo" width="100%" controls>
+          <source src="videos/Video_1.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+      </div>
+
+    </div>
+
+    <div class="main-container">
+      <!-- Header -->
+      <header class="container">
+        <!-- Navigation -->
+        <nav>
+          <input type="checkbox" id="nav-check" />
+          <div class="nav-header">
+            <a href="/" class="logo">
+              <h4>Squash <span> Codes</span></h4>
+            </a>
+          </div>
+
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="nav-links">
+            <a href="#portfolio">Vídeos</a>
+          </div>
+        </nav>
+        <!-- Hero -->
+        <section id="hero">
+          <div class="hero-image">
+            <img src="https://media.discordapp.net/attachments/752936948062093362/864181836123734076/Logo_Lamp1.png?width=676&height=676" alt="Dimas Abimanyu" />
+          </div>
+          <div class="hero-info">
+            <h5>Plataforma de suporte</h5>
+            <h1>Squash Codes</h1>
+            <p>
+              Está com dúvidas na ativação de um produto, problemas
+              no resource ou qualquer outra coisa? Aqui contemos
+              uma variedade seleta de vídeos de suporte que 
+              podem te ajudar.
+            </p>
+            <div class="hero-info-btn">
+              <a href="https://squash.codes" class="btn btn-blue">Ir para o site</a>
+              <a href="https://dsc.gg/squash.codes" class="btn">Discord</a>
+            </div>
+          </div>
+        </section>
+      </header>
+
+  
+
+      <!-- Main Content -->
+      <main class="container">
+
+        <section id="portfolio">
+          <h3 class="section-title">
+            Vídeos
+            <div class="grey-line"><div class="blue-fill"></div></div>
+          </h3>
+          <div class="portfolio-wrapper">
+            <!-- Project 1  -->
+            <div class="project">
+              <div class="project-thumbnail">
+                <img src="images/Image_1.png" alt="Project 1" />
+                <h6>Como ativar sua licença</h6>
+              </div>
+              <div class="project-desc">
+                <h4>Como ativar sua licença</h4>
+                <p>
+                  Assista o vídeo para entender brevemente como ativar
+                  sua licença para que seu resource possa funcionar corretamente.
+                </p>
+                <div class="project-btn">
+                  <a href="#" id = 'myBtn' class="btn btn-blue">Assistir vídeo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-thumbnail">
+                <img src="images/project-1.jpg" alt="Project 1" />
+                <h6>Como ativar sua licença</h6>
+              </div>
+              <div class="project-desc">
+                <h4>Como ativar sua licença</h4>
+                <p>
+                  Assista o vídeo para entender brevemente como ativar
+                  sua licença para que seu resource possa funcionar corretamente.
+                </p>
+                <div class="project-btn">
+                  <a href="#" class="btn btn-blue">Assistir vídeo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-thumbnail">
+                <img src="images/project-1.jpg" alt="Project 1" />
+                <h6>Como ativar sua licença</h6>
+              </div>
+              <div class="project-desc">
+                <h4>Como ativar sua licença</h4>
+                <p>
+                  Assista o vídeo para entender brevemente como ativar
+                  sua licença para que seu resource possa funcionar corretamente.
+                </p>
+                <div class="project-btn">
+                  <a href="#" class="btn btn-blue">Assistir vídeo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-thumbnail">
+                <img src="images/project-1.jpg" alt="Project 1" />
+                <h6>Como ativar sua licença</h6>
+              </div>
+              <div class="project-desc">
+                <h4>Como ativar sua licença</h4>
+                <p>
+                  Assista o vídeo para entender brevemente como ativar
+                  sua licença para que seu resource possa funcionar corretamente.
+                </p>
+                <div class="project-btn">
+                  <a href="#abrirModal" class="btn btn-blue">Assistir vídeo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-wrapper container">
+          <p>&copy; Todos os direitos reservados - Squash Codes</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2b296c63cf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- My JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      var vid = document.getElementById("myVideo"); 
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+        vid.play(); 
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+        vid.pause();
+      }            
+      window.onclick = function(event) {
+        if (event.target == modal) 
+        {                
+          modal.style.display = "none";
+          vid.pause();
+        }
+      }
+</script>
+  </body>
+</html>
