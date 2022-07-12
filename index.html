@@ -1,349 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Squash Codes - Tutoriais</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- Font awesome -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      /* fundo do pop-up (background) */
-      .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2; /* Define que o pop-up deverá ficar sobre outros elementos */
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; /* Habilita o scroll */            
-            background-color: rgb(0,0,0); 
-      }
-
-      /* Modal Content */
-      .modal-content {
-            position: relative;
-            /*background-color: #fefefe;*/
-            margin: auto;
-            padding: 0;
-            width: 75%;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.6s
-      }
-
-      /* Animações */
-      @-webkit-keyframes animatetop {
-      from {top:-300px; opacity:0} 
-      to {top:0; opacity:1}
-      }
-
-      @keyframes animatetop {
-      from {top:-300px; opacity:0}
-      to {top:0; opacity:1}
-      }
-
-      /* Botão Fechar */
-      .close {
-      color: white;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-      }
-      .modal-body {padding: 2px 16px;}
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Squash Codes - Tutoriais</title>
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/nav.css" />
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- Font awesome -->
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+         rel="stylesheet"
+         />
+      <style>
+         /* fundo do pop-up (background) */
+         .modal {
+         display: none; 
+         position: fixed; 
+         z-index: 2; /* Define que o pop-up deverá ficar sobre outros elementos */
+         left: 0;
+         top: 0;
+         width: 100%; 
+         height: 100%; 
+         overflow: auto; /* Habilita o scroll */            
+         background-color: rgb(0,0,0); 
+         }
+         /* Modal Content */
+         .modal-content {
+         position: relative;
+         /*background-color: #fefefe;*/
+         margin: auto;
+         padding: 0;
+         width: 75%;
+         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+         -webkit-animation-name: animatetop;
+         -webkit-animation-duration: 0.4s;
+         animation-name: animatetop;
+         animation-duration: 0.6s
+         }
+         /* Animações */
+         @-webkit-keyframes animatetop {
+         from {top:-300px; opacity:0} 
+         to {top:0; opacity:1}
+         }
+         @keyframes animatetop {
+         from {top:-300px; opacity:0}
+         to {top:0; opacity:1}
+         }
+         /* Botão Fechar */
+         .close {
+         color: white;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+         }
+         .close:hover,
+         .close:focus {
+         color: #000;
+         text-decoration: none;
+         cursor: pointer;
+         }
+         .modal-body {padding: 2px 16px;}
       </style>
-
-  </head>
-  <body>
-
-      
-
-    <div id="myModal" class="modal">      
-      <!-- Conteúdo do Pop-up -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <video id="myVideo" width="100%" controls>
-          <source src="videos/Video_1.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
+   </head>
+   <body>
+      <div id="myModal" class="modal">
+         <!-- Conteúdo do Pop-up -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="myVideo" width="100%" controls>
+               <source src="videos/Video_1.mp4" type="video/mp4">
+               Your browser does not support HTML video.
+            </video>
+         </div>
       </div>
-
-    </div>
-
-    <div class="main-container">
-      <!-- Header -->
-      <header class="container">
-        <!-- Navigation -->
-        <nav>
-          <input type="checkbox" id="nav-check" />
-          <div class="nav-header">
-            <a href="/" class="logo">
-              <h4>Squash <span> Codes</span></h4>
-            </a>
-          </div>
-
-          <div class="nav-btn">
-            <label for="nav-check">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-          </div>
-
-          <div class="nav-links">
-            <a href="#about">Suporte</a>
-            <a href="#portfolio">Vídeos</a>
-            <a href="#form">Aplicação</a>
-          </div>
-        </nav>
-        <!-- Hero -->
-        <section id="hero">
-          <div class="hero-image">
-            <img src="https://media.discordapp.net/attachments/752936948062093362/864181836123734076/Logo_Lamp1.png?width=676&height=676" alt="Dimas Abimanyu" />
-          </div>
-          <div class="hero-info">
-            <h5>Plataforma de suporte</h5>
-            <h1>Squash Codes</h1>
-            <p>
-              Está com dúvidas na ativação de um produto, problemas
-              no resource ou qualquer outra coisa? Aqui contemos
-              uma variedade seleta de vídeos de suporte que 
-              podem te ajudar.
-            </p>
-            <div class="hero-info-btn">
-              <a href="https://squash.codes" class="btn btn-blue">Ir para o site</a>
-              <a href="https://dsc.gg/squash.codes" class="btn">Discord</a>
-              <a href="#form" class="btn">Aplicação</a>
+      <div class="main-container">
+         <!-- Header -->
+         <header class="container">
+            <!-- Navigation -->
+            <nav>
+               <input type="checkbox" id="nav-check" />
+               <div class="nav-header">
+                  <a href="/" class="logo">
+                     <h4>Squash <span> Codes</span></h4>
+                  </a>
+               </div>
+               <div class="nav-btn">
+                  <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </label>
+               </div>
+               <div class="nav-links">
+                  <a href="#about">Suporte</a>
+                  <a href="#portfolio">Vídeos</a>
+                  <a href="#application">Aplicação</a>
+               </div>
+            </nav>
+            <!-- Hero -->
+            <section id="hero">
+               <div class="hero-image">
+                  <img src="https://media.discordapp.net/attachments/752936948062093362/864181836123734076/Logo_Lamp1.png?width=676&height=676" alt="Dimas Abimanyu" />
+               </div>
+               <div class="hero-info">
+                  <h5>Plataforma de suporte</h5>
+                  <h1>Squash Codes</h1>
+                  <p>
+                     Está com dúvidas na ativação de um produto, problemas
+                     no resource ou qualquer outra coisa? Aqui contemos
+                     uma variedade seleta de vídeos de suporte que 
+                     podem te ajudar.
+                  </p>
+                  <div class="hero-info-btn">
+                     <a href="https://squash.codes" class="btn btn-blue">Ir para o site</a>
+                     <a href="https://dsc.gg/squash.codes" class="btn">Discord</a>
+                     <a href="#application" class="btn">Aplicação</a>
+                  </div>
+               </div>
+            </section>
+         </header>
+         <!-- Main Content -->
+         <main class="container">
+         <section id="about">
+            <h3 class="section-title">
+               Suporte
+               <div class="grey-line">
+                  <div class="blue-fill"></div>
+               </div>
+            </h3>
+            <div class="about-wrapper">
+               <div>
+                  <p>
+                     Caso você não encontre o que precisa aqui na plataforma, abra um ticket de
+                     suporte em nosso discord para que possamos lhe atender e solucionar seu problema
+                     de maneira rápida e eficiente.
+                  </p>
+                  <p>
+                     Para abrir um ticket em nosso discord, basta ir em algum canal de comandos e executar
+                     o comando !suporte ou !ticket, após isso, basta descrever o seu problema e esperar que
+                     algum STAFF lhe atenda. 
+                  </p>
+                  <p>
+                     Caso receba um bom atendimento, não esqueça de nos avaliar no canal de feedback's, é muito
+                     importante para gente que vocês avaliem nosso trabalho e suporte. Caso queiram, também é 
+                     possível dar um feedback específico a um resource, em nosso site oficial.
+                  </p>
+                  <p class="about-tech">
+                     Espero poder sanar todas as suas dúvidas! :D
+                  </p>
+               </div>
+               <div class="about-image">
+                  <img src="images/about.jpg" alt="Dimas Abimanyu" />
+               </div>
             </div>
-          </div>
-        </section>
-      </header>
-
-  
-
-      <!-- Main Content -->
-      <main class="container">
-        <section id="about">
-          <h3 class="section-title">
-            Suporte
-            <div class="grey-line"><div class="blue-fill"></div></div>
-          </h3>
-          <div class="about-wrapper">
-            <div>
-              <p>
-                Caso você não encontre o que precisa aqui na plataforma, abra um ticket de
-                suporte em nosso discord para que possamos lhe atender e solucionar seu problema
-                de maneira rápida e eficiente.
-              </p>
-              <p>
-                Para abrir um ticket em nosso discord, basta ir em algum canal de comandos e executar
-                o comando !suporte ou !ticket, após isso, basta descrever o seu problema e esperar que
-                algum STAFF lhe atenda. 
-              </p>
-              <p>
-                Caso receba um bom atendimento, não esqueça de nos avaliar no canal de feedback's, é muito
-                importante para gente que vocês avaliem nosso trabalho e suporte. Caso queiram, também é 
-                possível dar um feedback específico a um resource, em nosso site oficial.
-              </p>
-              <p class="about-tech">
-                Espero poder sanar todas as suas dúvidas! :D
-              </p>
-              
-  
+         </section>
+         <section id="portfolio">
+            <h3 class="section-title">
+               Vídeos
+               <div class="grey-line">
+                  <div class="blue-fill"></div>
+               </div>
+            </h3>
+            <div class="portfolio-wrapper">
+               <!-- Project 1  -->
+               <div class="project">
+                  <div class="project-thumbnail">
+                     <img src="images/Image_1.png" alt="Project 1" />
+                     <h6>Como ativar sua licença</h6>
+                  </div>
+                  <div class="project-desc">
+                     <h4>Como ativar sua licença</h4>
+                     <p>
+                        Assista o vídeo para entender brevemente como ativar
+                        sua licença para que seu resource possa funcionar corretamente.
+                     </p>
+                     <div class="project-btn">
+                        <a href="#" id = 'myBtn' class="btn btn-blue">Assistir vídeo</a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="about-image">
-              <img src="images/about.jpg" alt="Dimas Abimanyu" />
+         </section>
+         <section id="application">
+            <h3 class="section-title">
+               Aplicação ao suporte
+               <div class="grey-line">
+                  <div class="blue-fill"></div>
+               </div>
+            </h3>
+            <p>Temos uma noticia muito boa para todos, tanto para quem está a procura de uma vaga de suporte quanto para vocês clientes que merecem um suporte rápido e eficiente, hoje estamos abrindo novas vagas para suporte de nossa loja, todos poderão participar, caso cumpram com os seguintes requisitos:</p>
+            <br>
+            <div class="about-wrapper">
+               <div>
+                  <p class="about-tech">Informações:</p>
+                  <p>A remuneração conta com um salário fixo, e com vários bônus (iremos dar mais informações sobre o bônus, caso você tenha interesse), você não precisa de experiência na área de suporte para se inscrever, basta ter um conhecimento básico de MTA (em geral) e lógica de programação.
+                     <br><br>OBS: Quando realizar o formulário, não peça para ninguém "agilizar" o processo, caso mande mensagem para a equipe pedindo para ler seu formulário será automaticamente desclassificado!
+                  </p>
+               </div>
+               <div>
+                  <p class="about-tech">Requisitos:</p>
+                  <p>- Mínimo de 16 anos de idade<br>
+                     - Ter flexibilidade de tempo para prestar suporte<br>
+                     - Ter uma boa ortografia<br>
+                     - Ter responsabilidade e compromisso<br>
+                     - Conhecimento básico em LUA ou configuração de resources<br>
+                     - Lógica de programação<br>
+                     - Fundamentos de atendimento ao cliente
+                  </p>
+                  <br>
+               </div>
             </div>
-          </div>
-        </section>
-        
-        <section id="portfolio">
-          <h3 class="section-title">
-            Vídeos
-            <div class="grey-line"><div class="blue-fill"></div></div>
-          </h3>
-          <div class="portfolio-wrapper">
-            <!-- Project 1  -->
-            <div class="project">
-              <div class="project-thumbnail">
-                <img src="images/Image_1.png" alt="Project 1" />
-                <h6>Como ativar sua licença</h6>
-              </div>
-              <div class="project-desc">
-                <h4>Como ativar sua licença</h4>
-                <p>
-                  Assista o vídeo para entender brevemente como ativar
-                  sua licença para que seu resource possa funcionar corretamente.
-                </p>
-                <div class="project-btn">
-                  <a href="#" id = 'myBtn' class="btn btn-blue">Assistir vídeo</a>
-                </div>
-              </div>
+            <p class="about-tech">Formúlario:</p>
+            <iframe id="JotFormIFrame-221917036418657" title="Formulário SQUASH" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/221917036418657" frameborder="0" style=" min-width: 100%; height:539px; border:none;" scrolling="no" ></iframe>
+         </section>
+         <!-- Footer -->
+         <footer>
+            <div class="footer-wrapper container">
+               <p>&copy; Todos os direitos reservados - Squash Codes</p>
             </div>
-            
-          </div>
-        </section>
-
-        <section id="form">
-          <h3 class="section-title">
-            Aplicação ao suporte
-            <div class="grey-line"><div class="blue-fill"></div></div>
-          </h3>
-          <p>Temos uma noticia muito boa para todos, tanto para quem está a procura de uma vaga de suporte quanto para vocês clientes que merecem um suporte rápido e eficiente, hoje estamos abrindo novas vagas para suporte de nossa loja, todos poderão participar, caso cumpram com os seguintes requisitos:</p><br>
-          <div class="about-wrapper">
-            <div>
-              <p class="about-tech">Informações:</p>
-              <p>A remuneração conta com um salário fixo, e com vários bônus (iremos dar mais informações sobre o bônus, caso você tenha interesse), você não precisa de experiência na área de suporte para se inscrever, basta ter um conhecimento básico de MTA (em geral) e lógica de programação.
-              <br><br>OBS: Quando realizar o formulário, não peça para ninguém "agilizar" o processo, caso mande mensagem para a equipe pedindo para ler seu formulário será automaticamente desclassificado!</p>
-            </div>
-            <div>
-              <p class="about-tech">Requisitos:</p>
-              <p>- Mínimo de 16 anos de idade<br>
-                - Ter flexibilidade de tempo para prestar suporte<br>
-                - Ter uma boa ortografia<br>
-                - Ter responsabilidade e compromisso<br>
-                - Conhecimento básico em LUA ou configuração de resources<br>
-                - Lógica de programação<br>
-                - Fundamentos de atendimento ao cliente
-              </p><br>
-            </div>
-          </div>
-          <p class="about-tech">Formúlario:</p>
-          <iframe id="JotFormIFrame-221917036418657" title="Formulário SQUASH" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/221917036418657" frameborder="0" style=" min-width: 100%; height:539px; border:none;" scrolling="no" ></iframe>
-        </section>
-
-
-      <!-- Footer -->
-      <footer>
-        <div class="footer-wrapper container">
-          <p>&copy; Todos os direitos reservados - Squash Codes</p>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Font awesome -->
-    <script
-      src="https://kit.fontawesome.com/2b296c63cf.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- My JS -->
-    <script type="text/javascript" src="js/main.js"></script>
+         </footer>
+      </div>
+      <!-- Font awesome -->
+      <script
+         src="https://kit.fontawesome.com/2b296c63cf.js"
+         crossorigin="anonymous"
+         ></script>
+      <!-- My JS -->
+      <script type="text/javascript" src="js/main.js"></script>
       <script>
-        var vid = document.getElementById("myVideo"); 
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("myBtn");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function() {
-          modal.style.display = "block";
-          vid.play(); 
-        }
-        span.onclick = function() {
-          modal.style.display = "none";
-          vid.pause();
-        }            
-        window.onclick = function(event) {
-          if (event.target == modal) 
-          {                
-            modal.style.display = "none";
-            vid.pause();
-          }
-        }
-
-        var ifr = document.getElementById("JotFormIFrame-221917036418657");
-    if (ifr) {
-      var src = ifr.src;
-      var iframeParams = [];
-      if (window.location.href && window.location.href.indexOf("?") > -1) {
-        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-      }
-      if (src && src.indexOf("?") > -1) {
-        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-        src = src.substr(0, src.indexOf("?"))
-      }
-      iframeParams.push("isIframeEmbed=1");
-      ifr.src = src + "?" + iframeParams.join('&');
-    }
-    window.handleIFrameMessage = function(e) {
-      if (typeof e.data === 'object') { return; }
-      var args = e.data.split(":");
-      if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-      if (!iframe) { return; }
-      switch (args[0]) {
-        case "scrollIntoView":
-          iframe.scrollIntoView();
-          break;
-        case "setHeight":
-          iframe.style.height = args[1] + "px";
-          break;
-        case "collapseErrorPage":
-          if (iframe.clientHeight > window.innerHeight) {
-            iframe.style.height = window.innerHeight + "px";
-          }
-          break;
-        case "reloadPage":
-          window.location.reload();
-          break;
-        case "loadScript":
-          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-          var src = args[1];
-          if (args.length > 3) {
-              src = args[1] + ':' + args[2];
-          }
-          var script = document.createElement('script');
-          script.src = src;
-          script.type = 'text/javascript';
-          document.body.appendChild(script);
-          break;
-        case "exitFullscreen":
-          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-          break;
-      }
-      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-      }
-    };
-    window.isPermitted = function(originUrl, whitelisted_domains) {
-      var url = document.createElement('a');
-      url.href = originUrl;
-      var hostname = url.hostname;
-      var result = false;
-      if( typeof hostname !== 'undefined' ) {
-        whitelisted_domains.forEach(function(element) {
-            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-                result = true;
-            }
-        });
-        return result;
-      }
-    };
-    if (window.addEventListener) {
-      window.addEventListener("message", handleIFrameMessage, false);
-    } else if (window.attachEvent) {
-      window.attachEvent("onmessage", handleIFrameMessage);
-    }
-  </script>
-  </body>
+         var vid = document.getElementById("myVideo"); 
+         var modal = document.getElementById("myModal");
+         var btn = document.getElementById("myBtn");
+         var span = document.getElementsByClassName("close")[0];
+         btn.onclick = function() {
+           modal.style.display = "block";
+           vid.play(); 
+         }
+         span.onclick = function() {
+           modal.style.display = "none";
+           vid.pause();
+         }            
+         window.onclick = function(event) {
+           if (event.target == modal) 
+           {                
+             modal.style.display = "none";
+             vid.pause();
+           }
+         }
+         
+         var ifr = document.getElementById("JotFormIFrame-221917036418657");
+         if (ifr) {
+         var src = ifr.src;
+         var iframeParams = [];
+         if (window.location.href && window.location.href.indexOf("?") > -1) {
+         iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+         }
+         if (src && src.indexOf("?") > -1) {
+         iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+         src = src.substr(0, src.indexOf("?"))
+         }
+         iframeParams.push("isIframeEmbed=1");
+         ifr.src = src + "?" + iframeParams.join('&');
+         }
+         window.handleIFrameMessage = function(e) {
+         if (typeof e.data === 'object') { return; }
+         var args = e.data.split(":");
+         if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+         if (!iframe) { return; }
+         switch (args[0]) {
+         case "scrollIntoView":
+           iframe.scrollIntoView();
+           break;
+         case "setHeight":
+           iframe.style.height = args[1] + "px";
+           break;
+         case "collapseErrorPage":
+           if (iframe.clientHeight > window.innerHeight) {
+             iframe.style.height = window.innerHeight + "px";
+           }
+           break;
+         case "reloadPage":
+           window.location.reload();
+           break;
+         case "loadScript":
+           if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+           var src = args[1];
+           if (args.length > 3) {
+               src = args[1] + ':' + args[2];
+           }
+           var script = document.createElement('script');
+           script.src = src;
+           script.type = 'text/javascript';
+           document.body.appendChild(script);
+           break;
+         case "exitFullscreen":
+           if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+           else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+           else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+           else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+           else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+           break;
+         }
+         var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+         if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+         var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+         iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+         }
+         };
+         window.isPermitted = function(originUrl, whitelisted_domains) {
+         var url = document.createElement('a');
+         url.href = originUrl;
+         var hostname = url.hostname;
+         var result = false;
+         if( typeof hostname !== 'undefined' ) {
+         whitelisted_domains.forEach(function(element) {
+             if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                 result = true;
+             }
+         });
+         return result;
+         }
+         };
+         if (window.addEventListener) {
+         window.addEventListener("message", handleIFrameMessage, false);
+         } else if (window.attachEvent) {
+         window.attachEvent("onmessage", handleIFrameMessage);
+         }
+      </script>
+   </body>
 </html>
